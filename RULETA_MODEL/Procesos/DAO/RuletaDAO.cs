@@ -135,7 +135,7 @@ namespace RULETA_MODEL.Procesos.DAO
             List<CierreRuletas> ListCierr = new List<CierreRuletas>();
             using (SqlConnection con = new SqlConnection(conexion))
             {
-                string sentencia = querySQL(4, new Ruleta { });
+                string sentencia = querySQL(4, new Ruleta { idRuleta = idRuleta });
                 SqlCommand cmd = new SqlCommand(sentencia, con);
                 con.Open();
                 SqlDataReader rd = cmd.ExecuteReader();
